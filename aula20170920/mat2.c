@@ -1,15 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-
 int main(){
-	float x1, y1, x2, y2, distancia;
-	printf("Entre com as coordenadas x1, y1: ");
-	scanf("%f,%f", &x1, &y1);
-	printf("Entre com as coordenadas x2, y2: ");
-	scanf("%f,%f", &x2, &y2);
-	distancia = sqrt(pow(x2-x1,2)+pow(y2-y1,2));
-	printf("A distancia entre os pontos = %f\n", distancia);
-	return EXIT_SUCCESS;
+    float b, c, a;
+    double A;
+    printf("Entre com os lados do triangulo bc e com o angulo em radianos entre eles: ");
+    scanf("%f,%f, %lf", &b, &c, &A);
+    a = sqrt(pow(b,2)+ pow(c,2) - (2*b*c*cos(A)));
+    printf("Medida: %f\n", a);
+    return EXIT_SUCCESS;
 }
-
